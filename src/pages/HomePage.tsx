@@ -7,6 +7,7 @@ import PropertySearch, { type PropertySearchParams } from '../components/propert
 import PropertyCard from '../components/property/PropertyCard';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
+import HeroSection from '../components/common/HeroSection'; 
 
 // Mock data for featured properties
 const featuredProperties = [
@@ -314,26 +315,20 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      {/* Hero Section */}
-      <section 
-        className="relative bg-cover bg-center h-[600px]" 
-        style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80')",
-          backgroundBlendMode: "overlay",
-          backgroundColor: "rgba(0, 0, 0, 0.4)"
-        }}
-      >
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Find Your Dream Home
-          </h1>
-          <p className="text-xl text-white mb-8 max-w-2xl">
-            Discover the perfect property that matches your lifestyle from our extensive collection of listings.
-          </p>
+      {/* New Hero Section with Carousel */}
+      <HeroSection />
 
-          {/* Search Box */}
-          <div className="w-full max-w-4xl">
-            <PropertySearch onSearch={handleSearch} />
+      {/* Search Section - Moved outside hero for better separation */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Find Your Perfect Property</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Use our advanced search to discover properties that match your exact requirements
+            </p>
+          </div>
+          <div className="max-w-6xl mx-auto">
+            <PropertySearch onSearch={handleSearch} isAdvanced={true} />
           </div>
         </div>
       </section>
