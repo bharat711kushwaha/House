@@ -1,6 +1,6 @@
 // src/layouts/DashboardLayout.tsx
 
-import React, { ReactNode, useState } from 'react';
+import React, { type ReactNode, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   User, 
@@ -16,13 +16,27 @@ import {
   ChevronUp,
   Search,
   PlusCircle,
-  Layers,
   BarChart,
   Users,
   Building
 } from 'lucide-react';
-import Header from '../components/common/Header';
+
 import Footer from '../components/common/Footer';
+
+// Interface for child menu items
+interface ChildMenuItem {
+  path: string;
+  label: string;
+}
+
+// Interface for main navigation items
+interface NavItem {
+  path: string;
+  label: string;
+  icon: React.ReactNode;
+  role: string[];
+  children?: ChildMenuItem[];
+}
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -66,7 +80,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
     return location.pathname === path;
   };
 
-  const userNavItems = [
+  const userNavItems: NavItem[] = [
     { 
       path: '/dashboard', 
       label: 'Dashboard', 
@@ -93,7 +107,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
     },
   ];
 
-  const ownerNavItems = [
+  const ownerNavItems: NavItem[] = [
     { 
       path: '/owner/dashboard', 
       label: 'Dashboard', 
@@ -130,7 +144,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
     },
   ];
 
-  const adminNavItems = [
+  const adminNavItems: NavItem[] = [
     { 
       path: '/admin/dashboard', 
       label: 'Dashboard', 
@@ -164,7 +178,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
   ];
 
   // Determine which nav items to display based on user role
-  let navItems = userNavItems;
+  let navItems: NavItem[] = userNavItems;
   if (userRole === 'owner') {
     navItems = ownerNavItems;
   } else if (userRole === 'admin') {
@@ -331,7 +345,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
                         {/* Submenu */}
                         {openMenus[item.label.toLowerCase()] && (
                           <ul className="ml-6 mt-2 space-y-1 border-l-2 border-gray-100 pl-4">
-                            {item.children.map((child) => (
+                            {item.children.map((child: ChildMenuItem) => (
                               <li key={child.path}>
                                 <Link
                                   to={child.path}

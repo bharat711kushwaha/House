@@ -2,12 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Grid, List, MapPin, SlidersHorizontal, X,Heart,Bed,Bath ,Square } from 'lucide-react';
+import { Grid, List, MapPin, SlidersHorizontal, X, Heart, Bed, Bath, Square, Search } from 'lucide-react'; // Fixed: Added Search import
 import PropertySearch, { type PropertySearchParams } from '../components/property/PropertySearch';
 import PropertyCard from '../components/property/PropertyCard';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import { ChevronRight } from 'lucide-react';
+
 // Mock property data (same as used in HomePage.tsx)
 const allProperties = [
   {
@@ -311,7 +312,7 @@ const PropertiesPage: React.FC = () => {
     propertyType: '',
     location: '',
     status: '',
-    minPrice: '',
+    minPrice: '', // Fixed: Changed from 0 to empty string to match updated interface
     maxPrice: '',
     bedrooms: '',
     bathrooms: '',
@@ -321,6 +322,11 @@ const PropertiesPage: React.FC = () => {
   });
   const [showFilters, setShowFilters] = useState(false);
   const [favorites, setFavorites] = useState<string[]>([]);
+  
+  // Helper function to convert string to number or keep as empty string
+  const convertToNumberOrEmpty = (value: string): number | '' => {
+    return value === '' ? '' : Number(value);
+  };
   
   // Parse URL query parameters
   useEffect(() => {
@@ -385,40 +391,40 @@ const PropertiesPage: React.FC = () => {
     }
     
     // Apply price range filter
-    if (filters.minPrice) {
+    if (filters.minPrice && typeof filters.minPrice === 'number') {
       results = results.filter(property => 
-        property.price >= Number(filters.minPrice)
+        property.price >= (filters.minPrice as number)
       );
     }
-    if (filters.maxPrice) {
+    if (filters.maxPrice && typeof filters.maxPrice === 'number') {
       results = results.filter(property => 
-        property.price <= Number(filters.maxPrice)
+        property.price <= (filters.maxPrice as number)
       );
     }
     
     // Apply bedroom filter
-    if (filters.bedrooms) {
+    if (filters.bedrooms && typeof filters.bedrooms === 'number') {
       results = results.filter(property => 
-        property.bedrooms >= Number(filters.bedrooms)
+        property.bedrooms >= (filters.bedrooms as number)
       );
     }
     
     // Apply bathroom filter
-    if (filters.bathrooms) {
+    if (filters.bathrooms && typeof filters.bathrooms === 'number') {
       results = results.filter(property => 
-        property.bathrooms >= Number(filters.bathrooms)
+        property.bathrooms >= (filters.bathrooms as number)
       );
     }
     
     // Apply area range filter
-    if (filters.minArea) {
+    if (filters.minArea && typeof filters.minArea === 'number') {
       results = results.filter(property => 
-        property.area >= Number(filters.minArea)
+        property.area >= (filters.minArea as number)
       );
     }
-    if (filters.maxArea) {
+    if (filters.maxArea && typeof filters.maxArea === 'number') {
       results = results.filter(property => 
-        property.area <= Number(filters.maxArea)
+        property.area <= (filters.maxArea as number)
       );
     }
     
@@ -631,7 +637,7 @@ const PropertiesPage: React.FC = () => {
                       type="number"
                       id="minPrice"
                       value={activeFilters.minPrice}
-                      onChange={(e) => handleSearch({ ...activeFilters, minPrice: e.target.value })}
+                      onChange={(e) => handleSearch({ ...activeFilters, minPrice: convertToNumberOrEmpty(e.target.value) })} // Fixed: Type conversion
                       placeholder="No Min"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
                     />
@@ -644,7 +650,7 @@ const PropertiesPage: React.FC = () => {
                       type="number"
                       id="maxPrice"
                       value={activeFilters.maxPrice}
-                      onChange={(e) => handleSearch({ ...activeFilters, maxPrice: e.target.value })}
+                      onChange={(e) => handleSearch({ ...activeFilters, maxPrice: convertToNumberOrEmpty(e.target.value) })} // Fixed: Type conversion
                       placeholder="No Max"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 "
                     />
@@ -657,7 +663,7 @@ const PropertiesPage: React.FC = () => {
                 <h3 className="font-medium text-gray-700 mb-2">Bedrooms</h3>
                 <select
                   value={activeFilters.bedrooms}
-                  onChange={(e) => handleSearch({ ...activeFilters, bedrooms: e.target.value })}
+                  onChange={(e) => handleSearch({ ...activeFilters, bedrooms: convertToNumberOrEmpty(e.target.value) })} // Fixed: Type conversion
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
                 >
                   <option value="">Any</option>
@@ -674,7 +680,7 @@ const PropertiesPage: React.FC = () => {
                 <h3 className="font-medium  text-gray-700 mb-2">Bathrooms</h3>
                 <select
                   value={activeFilters.bathrooms}
-                  onChange={(e) => handleSearch({ ...activeFilters, bathrooms: e.target.value })}
+                  onChange={(e) => handleSearch({ ...activeFilters, bathrooms: convertToNumberOrEmpty(e.target.value) })} // Fixed: Type conversion
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
                 >
                   <option value="">Any</option>
@@ -698,7 +704,7 @@ const PropertiesPage: React.FC = () => {
                       type="number"
                       id="minArea"
                       value={activeFilters.minArea}
-                      onChange={(e) => handleSearch({ ...activeFilters, minArea: e.target.value })}
+                      onChange={(e) => handleSearch({ ...activeFilters, minArea: convertToNumberOrEmpty(e.target.value) })} // Fixed: Type conversion
                       placeholder="No Min"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
                     />
@@ -711,7 +717,7 @@ const PropertiesPage: React.FC = () => {
                       type="number"
                       id="maxArea"
                       value={activeFilters.maxArea}
-                      onChange={(e) => handleSearch({ ...activeFilters, maxArea: e.target.value })}
+                      onChange={(e) => handleSearch({ ...activeFilters, maxArea: convertToNumberOrEmpty(e.target.value) })} // Fixed: Type conversion
                       placeholder="No Max"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
                     />
@@ -802,7 +808,7 @@ const PropertiesPage: React.FC = () => {
                     <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm flex items-center">
                       Price: {activeFilters.minPrice || '0'} - {activeFilters.maxPrice || 'Any'}
                       <button
-                        onClick={() => handleSearch({ ...activeFilters, minPrice: '', maxPrice: '' })}
+                        onClick={() => handleSearch({ ...activeFilters, minPrice: '', maxPrice: '' })} // Fixed: Now using empty strings
                         className="ml-2 text-blue-600 hover:text-blue-800"
                       >
                         <X size={14} />
@@ -964,4 +970,3 @@ const PropertiesPage: React.FC = () => {
 };
 
 export default PropertiesPage;
-                    

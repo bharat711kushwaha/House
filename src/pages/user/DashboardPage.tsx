@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Heart, Bell, User, Clock, Eye, TrendingUp, MapPin } from 'lucide-react';
+import { Calendar, Heart, Bell, User, Clock, Eye,  MapPin } from 'lucide-react';
 import DashboardLayout from '../../layouts/DashboardLayout';
 
 // Mock recent activities data

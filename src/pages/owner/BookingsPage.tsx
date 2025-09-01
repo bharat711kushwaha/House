@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Search, 
-  Filter, 
+  
   ChevronDown, 
   ChevronUp, 
   Check, 
@@ -15,7 +15,7 @@ import {
   Clock, 
   MapPin, 
   Eye,
-  MessageSquare
+  
 } from 'lucide-react';
 import DashboardLayout from '../../layouts/DashboardLayout';
 

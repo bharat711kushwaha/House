@@ -4,12 +4,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Home,
-  Users,
+  
   DollarSign,
   TrendingUp,
   Calendar,
   Plus,
-  BarChart2,
+  
   ChevronRight,
   Eye,
   Star,

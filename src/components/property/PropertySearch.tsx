@@ -14,7 +14,7 @@ export interface PropertySearchParams {
   propertyType: string;
   location: string;
   status: string;
-  minPrice: number | '';
+  minPrice: number | ''; // Fixed: Changed from just number to number | ''
   maxPrice: number | '';
   bedrooms: number | '';
   bathrooms: number | '';
@@ -35,7 +35,7 @@ const PropertySearch: React.FC<PropertySearchProps> = ({
     propertyType: '',
     location: '',
     status: '',
-    minPrice: '',
+    minPrice: '', // Fixed: Changed from 0 to empty string for consistency
     maxPrice: '',
     bedrooms: '',
     bathrooms: '',
@@ -46,10 +46,20 @@ const PropertySearch: React.FC<PropertySearchProps> = ({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setSearchParams(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    
+    // Handle numeric fields properly
+    if (['minPrice', 'maxPrice', 'bedrooms', 'bathrooms', 'minArea', 'maxArea'].includes(name)) {
+      const numericValue = value === '' ? '' : Number(value);
+      setSearchParams(prev => ({
+        ...prev,
+        [name]: numericValue
+      }));
+    } else {
+      setSearchParams(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {

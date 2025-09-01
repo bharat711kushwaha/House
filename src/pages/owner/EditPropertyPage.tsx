@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Upload, X, Plus, ArrowLeft, Save, MapPin, Camera, CheckCircle2, Home, DollarSign, Info } from 'lucide-react';
+import { Upload, X,  ArrowLeft, Save, MapPin, Camera, CheckCircle2, Home, DollarSign, Info } from 'lucide-react';
 import DashboardLayout from '../../layouts/DashboardLayout';
 
 const AddPropertyPage: React.FC = () => {

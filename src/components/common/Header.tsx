@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { User, Menu, X, Home } from 'lucide-react';
+import { User, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   isAuthenticated?: boolean;
