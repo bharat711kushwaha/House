@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Send, MapPin, Phone, Mail } from 'lucide-react';
-
+import logo from '/logo.png';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Information */}
           <div>
-            <h3 className="text-xl font-bold mb-4">FindHouses</h3>
+              <img src={logo} alt="FindHouses Logo" className="h-15 w-20" /> 
             <p className="text-gray-400 mb-4">
               FindHouses is the best place to find your next perfect place to live. 
               We have a wide range of properties for you to choose from.

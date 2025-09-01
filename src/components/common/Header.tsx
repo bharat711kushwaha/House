@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { User, Menu, X } from 'lucide-react';
-
+import logo from '/logo.png';
 interface HeaderProps {
   isAuthenticated?: boolean;
   userRole?: 'user' | 'owner' | 'admin';
@@ -26,8 +26,9 @@ const Header: React.FC<HeaderProps> = ({ isAuthenticated = false, userRole = 'us
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <h1 className="text-2xl font-bold text-blue-600">FindHouses</h1>
+         <Link to="/" className="flex items-center gap-2">
+            <img src={logo} alt="FindHouses Logo" className="h-15 w-20" /> 
+           
           </Link>
 
           {/* Desktop Navigation */}
