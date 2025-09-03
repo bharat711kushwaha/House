@@ -67,11 +67,14 @@ const propertyDetails: Property = {
     "Professionally Landscaped Yard"
   ],
   images: [
-    "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+    "https://live-images.stratuscollab.com/bRFvSnNtvzZdoDbxZe2LP0hVAoydb4jjT11mhA12n54/rs:fit:900:600:0/g:no/cb:MjAyNS0wOC0xM1QwMDowMDo0Ni4wMDBa/aHR0cHM6Ly90cnJlYi1pbWFnZS5hbXByZS5jYS9Oa0NUbXROc2tsOUhWUzIwOWphTl9VcXZFLVU5T3Awd3JsWExucW5zSjZRL3JzOmZpdC93OjE5MDAvaDoxOTAwL2c6Y2Uvd206LjU6c286MDo1MDouNC93bXNoOjEwL3dtdDpQSE53WVc0Z1ptOXlaV2R5YjNWdVpEMG5kMmhwZEdVbklHWnZiblE5SnpZNEp6NUZXRVZEVlZSSlZrVWdVa1ZCVENCRlUxUkJWRVVnVTBWU1ZrbERSVk1nVEZSRUxpd2dRbkp2YTJWeVlXZGxQQzl6Y0dGdVBnL0wzUnljbVZpTDJ4cGMzUnBibWR6THpReEx6ZzRMekU1THpnM0wzQXZNakZpWlRGaVpqQXRPVGMzWXkwME16UTNMVGxpWkRBdE1HWmhZMk5sTXpZNE5HWTFMbXB3WldjLmpwZw.jpg",
+    "https://live-images.stratuscollab.com/9kA6Dk97gfQZ54HxvDLm8sduhNfI47HbJkFMKWtJfV4/rs:fit:900:600:0/g:no/cb:MjAyNS0wOC0xM1QwMDowMDo0Ni4wMDBa/aHR0cHM6Ly90cnJlYi1pbWFnZS5hbXByZS5jYS9meG0zZ1Y2aEg0Z01RdnFKUHFZOFJNUG4xcXB4dE8xR2ZMWUdjbkM2Qm00L3JzOmZpdC93OjE5MDAvaDoxOTAwL2c6Y2Uvd206LjU6c286MDo1MDouNC93bXNoOjEwL3dtdDpQSE53WVc0Z1ptOXlaV2R5YjNWdVpEMG5kMmhwZEdVbklHWnZiblE5SnpZNEp6NUZXRVZEVlZSSlZrVWdVa1ZCVENCRlUxUkJWRVVnVTBWU1ZrbERSVk1nVEZSRUxpd2dRbkp2YTJWeVlXZGxQQzl6Y0dGdVBnL0wzUnljbVZpTDJ4cGMzUnBibWR6THpReEx6ZzRMekU1THpnM0wzQXZZamcwTXpJeE1tRXROMkU0TkMwME1XTm1MVGd4TlRjdE1tSmxOMll4WldNeFpEZ3hMbXB3WldjLmpwZw.jpg",
+    "https://live-images.stratuscollab.com/2Xqf4QQNM9oBdMIe2jz64D80kl4M0DfhfIJyGBHvd6c/rs:fit:900:600:0/g:no/cb:MjAyNS0wOC0xM1QwMDowMDo0Ni4wMDBa/aHR0cHM6Ly90cnJlYi1pbWFnZS5hbXByZS5jYS8xVGlFT1ZmUTh1a0NKY0xGNHFWaFh2MkNzdEdfOHBfTkUxUmxqMmpfREdzL3JzOmZpdC93OjE5MDAvaDoxOTAwL2c6Y2Uvd206LjU6c286MDo1MDouNC93bXNoOjEwL3dtdDpQSE53WVc0Z1ptOXlaV2R5YjNWdVpEMG5kMmhwZEdVbklHWnZiblE5SnpZNEp6NUZXRVZEVlZSSlZrVWdVa1ZCVENCRlUxUkJWRVVnVTBWU1ZrbERSVk1nVEZSRUxpd2dRbkp2YTJWeVlXZGxQQzl6Y0dGdVBnL0wzUnljbVZpTDJ4cGMzUnBibWR6THpReEx6ZzRMekU1THpnM0wzQXZZV1UyTnpVd1pEUXRZakF6WmkwME16a3hMV0k0WmpZdE5EQm1aVEV6TURnd05qQmpMbXB3WldjLmpwZw.jpg",
+    "https://live-images.stratuscollab.com/lHrziaY_1Sk1ogswmOIJGpMoQPhfMx8Vq4uJN-lxRb8/rs:fit:900:600:0/g:no/cb:MjAyNS0wOC0xM1QwMDowMDo0Ni4wMDBa/aHR0cHM6Ly90cnJlYi1pbWFnZS5hbXByZS5jYS9mckZmaGZWMExhOVA0TWxWdEFqd1FEUEF1S0VuVHZJNi1tMUZnMkdVWnFnL3JzOmZpdC93OjE5MDAvaDoxOTAwL2c6Y2Uvd206LjU6c286MDo1MDouNC93bXNoOjEwL3dtdDpQSE53WVc0Z1ptOXlaV2R5YjNWdVpEMG5kMmhwZEdVbklHWnZiblE5SnpZNEp6NUZXRVZEVlZSSlZrVWdVa1ZCVENCRlUxUkJWRVVnVTBWU1ZrbERSVk1nVEZSRUxpd2dRbkp2YTJWeVlXZGxQQzl6Y0dGdVBnL0wzUnljbVZpTDJ4cGMzUnBibWR6THpReEx6ZzRMekU1THpnM0wzQXZNVEV6TURVNU56WXRNakl4WVMwME5qTmxMVGxpTnpRdE1qVmxOMk0xWW1NM1pEaGlMbXB3WldjLmpwZw.jpg",
+    "https://live-images.stratuscollab.com/OzFRM8deQ9CJpRdxqPHu-we1kt1cZAUyec_uso6fwgg/rs:fit:900:600:0/g:no/cb:MjAyNS0wOC0xM1QwMDowMDo0Ni4wMDBa/aHR0cHM6Ly90cnJlYi1pbWFnZS5hbXByZS5jYS9WQWpJWDZFMGltWUJLSENlVzN4bHl4WkRqVEU4SW1DcVRySnYzUlJVQWE4L3JzOmZpdC93OjE5MDAvaDoxOTAwL2c6Y2Uvd206LjU6c286MDo1MDouNC93bXNoOjEwL3dtdDpQSE53WVc0Z1ptOXlaV2R5YjNWdVpEMG5kMmhwZEdVbklHWnZiblE5SnpZNEp6NUZXRVZEVlZSSlZrVWdVa1ZCVENCRlUxUkJWRVVnVTBWU1ZrbERSVk1nVEZSRUxpd2dRbkp2YTJWeVlXZGxQQzl6Y0dGdVBnL0wzUnljbVZpTDJ4cGMzUnBibWR6THpReEx6ZzRMekU1THpnM0wzQXZaakJsTnpoaFptRXROVEJqTUMwMFpqWmhMVGc0Tm1JdE9HTTRaRE0xTWpSbU9XUTRMbXB3WldjLmpwZw.jpg",
+    "https://live-images.stratuscollab.com/2TTLBdKP7Eo3ePr5Y7uT5iz1hPDzyN7FWhKmfyT1oMo/rs:fit:900:600:0/g:no/cb:MjAyNS0wOC0xM1QwMDowMDo0Ni4wMDBa/aHR0cHM6Ly90cnJlYi1pbWFnZS5hbXByZS5jYS9oOGw4MWJIMzMyRUlnSXUzX0ttYmpoNHpVdDhUdkl1aUlhWG5XclQ3cGljL3JzOmZpdC93OjE5MDAvaDoxOTAwL2c6Y2Uvd206LjU6c286MDo1MDouNC93bXNoOjEwL3dtdDpQSE53WVc0Z1ptOXlaV2R5YjNWdVpEMG5kMmhwZEdVbklHWnZiblE5SnpZNEp6NUZXRVZEVlZSSlZrVWdVa1ZCVENCRlUxUkJWRVVnVTBWU1ZrbERSVk1nVEZSRUxpd2dRbkp2YTJWeVlXZGxQQzl6Y0dGdVBnL0wzUnljbVZpTDJ4cGMzUnBibWR6THpReEx6ZzRMekU1THpnM0wzQXZOek5sWkRObU1Ea3RPRGRsTlMwME9EZzNMV0UxT1dNdE0yVTNNalkyWldZNU1qQTNMbXB3WldjLmpwZw.jpg",
+    "https://live-images.stratuscollab.com/Cn_nsJG20Xq8xsb58Y9flwiLoeoqEW0ZGfpzhK0tei8/rs:fit:900:600:0/g:no/cb:MjAyNS0wOC0xM1QwMDowMDo0Ni4wMDBa/aHR0cHM6Ly90cnJlYi1pbWFnZS5hbXByZS5jYS9kcXpBYTQ0UUU5Nmt1ZHhDamh5cVhmM0pCZGtKR2c2aDNqRkdWbUJxbVVVL3JzOmZpdC93OjE5MDAvaDoxOTAwL2c6Y2Uvd206LjU6c286MDo1MDouNC93bXNoOjEwL3dtdDpQSE53WVc0Z1ptOXlaV2R5YjNWdVpEMG5kMmhwZEdVbklHWnZiblE5SnpZNEp6NUZXRVZEVlZSSlZrVWdVa1ZCVENCRlUxUkJWRVVnVTBWU1ZrbERSVk1nVEZSRUxpd2dRbkp2YTJWeVlXZGxQQzl6Y0dGdVBnL0wzUnljbVZpTDJ4cGMzUnBibWR6THpReEx6ZzRMekU1THpnM0wzQXZOVGd3WVRsaU5Ea3RaV0psTlMwME1tUTRMV0V3T1dFdFkyVTFNamhtT0RNek5tRmpMbXB3WldjLmpwZw.jpg"
+
   ],
   ownerId: 'owner1',
   createdAt: '2025-03-15T10:00:00Z',
@@ -82,13 +85,13 @@ const propertyDetails: Property = {
 // Agent data - updated for Canadian market
 const agent = {
   id: 'agent1',
-  name: "Michael Thompson",
-  phone: "+1 (519) 555-0123",
-  email: "michael.thompson@londonestate.ca",
-  image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80",
+  name: "ABHISHEK GUPTA",
+  phone: "+647-792-7000",
+  email: "abhishektherealtor@gmail.com",
+  image: "/200.jpeg",
   position: "Real Estate Agent",
   experience: 8,
-  description: "Michael is a dedicated real estate professional with over 8 years of experience in the London, Ontario market. He specializes in family homes and has extensive knowledge of the local school districts and amenities.",
+  description: "Abhishek is a dedicated real estate professional with over 8 years of experience in the London, Ontario market. He specializes in family homes and has extensive knowledge of the local school districts and amenities.",
   listings: 34,
   sales: 67,
 };
