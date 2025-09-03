@@ -24,44 +24,50 @@ import Footer from '../components/common/Footer';
 import PropertyCard from '../components/property/PropertyCard';
 import type { Property } from '../types';
 
-// Mock data for a single property
+// Updated property details with Canadian property information
 const propertyDetails: Property = {
   id: '1',
-  title: "Luxury Villa in Los Angeles",
-  description: "This stunning modern villa offers luxurious living with breathtaking views of the city. The property features high ceilings, floor-to-ceiling windows, and premium finishes throughout. The open-concept design seamlessly connects indoor and outdoor living spaces, perfect for entertaining.",
-  price: 3500000,
+  title: "Beautiful 4-Level Split Home with Ravine Lot",
+  description: "This beautifully maintained 4-level split detached home features 3+2 bedrooms, a 2-car garage, and a private ravine lot backing onto green space offering privacy, natural views, and a serene outdoor setting. This unique and spacious home boasts a grand 12-ft ceiling in the foyer, excellent ceiling heights throughout, and a functional, family-friendly layout that makes the most of every level. The upper level features three generously sized bedrooms, including a primary suite with a luxurious jacuzzi tub in the ensuite bathroom. The lower level offers a warm and inviting family room with a gas fireplace, a walk-out to the backyard, a fourth bedroom, and a 3-piece bathroom. The basement level features a fully self-contained studio apartment with its own kitchen, making it perfect as an in-law suite or rental unit.",
+  price: 849000,
   status: 'For Sale',
-  type: 'Villa',
-  bedrooms: 5,
-  bathrooms: 4,
-  area: 4200,
-  yearBuilt: 2021,
+  type: 'House',
+  bedrooms: 5, // 3+2 bedrooms
+  bathrooms: 3,
+  area: 1750,
+  yearBuilt: 2010,
   garages: 2,
   address: {
-    street: "1234 Wilshire Blvd",
-    city: "Los Angeles",
-    state: "CA",
-    zipCode: "90001",
-    country: "USA",
+    street: "Devon Rd",
+    city: "London",
+    state: "ON",
+    zipCode: "N6H",
+    country: "Canada",
   },
   features: [
-    "Swimming Pool", 
-    "Garden", 
-    "Security System", 
-    "Central Air Conditioning", 
-    "Balcony", 
-    "Fireplace", 
-    "Home Office"
+    "Private Ravine Lot", 
+    "Self-Contained Basement Apartment", 
+    "Gas Fireplace", 
+    "2 Full Kitchens", 
+    "Walk-out to Backyard", 
+    "Primary Suite with Jacuzzi",
+    "12-ft Ceiling in Foyer",
+    "Family Room",
+    "Stamped Concrete Driveway"
   ],
   amenities: [
-    "Gym", 
-    "Wine Cellar", 
-    "Smart Home Technology", 
-    "Home Theater", 
-    "Outdoor Kitchen"
+    "Central Air", 
+    "Natural Gas Heating", 
+    "Hardwood Flooring", 
+    "Granite & Quartz Countertops", 
+    "Stainless Steel Appliances", 
+    "Gas Stove",
+    "Laundry Area",
+    "Brick & Vinyl Facade",
+    "Professionally Landscaped Yard"
   ],
   images: [
-    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80",
+    "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80",
     "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80",
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80",
     "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80",
@@ -73,43 +79,43 @@ const propertyDetails: Property = {
   isFeatured: true,
 };
 
-// Agent data
+// Agent data - updated for Canadian market
 const agent = {
   id: 'agent1',
-  name: "Sarah Johnson",
-  phone: "+1 (123) 456-7890",
-  email: "sarah.johnson@realestate.com",
+  name: "Michael Thompson",
+  phone: "+1 (519) 555-0123",
+  email: "michael.thompson@londonestate.ca",
   image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80",
   position: "Real Estate Agent",
-  experience: 5,
-  description: "Sarah is a dedicated real estate professional with over 5 years of experience in the Los Angeles market. She specializes in luxury properties and has a keen eye for detail.",
-  listings: 24,
-  sales: 42,
+  experience: 8,
+  description: "Michael is a dedicated real estate professional with over 8 years of experience in the London, Ontario market. He specializes in family homes and has extensive knowledge of the local school districts and amenities.",
+  listings: 34,
+  sales: 67,
 };
 
-// Similar properties
+// Similar properties - updated for Canadian context
 const similarProperties: Property[] = [
   {
     id: '2',
-    title: 'Modern Apartment in Downtown',
-    description: 'Luxurious apartment in the heart of downtown with amazing city views.',
-    price: 950000,
+    title: 'Modern Family Home in Byron',
+    description: 'Beautiful 3-bedroom family home in the prestigious Byron area with updated kitchen and finished basement.',
+    price: 725000,
     status: 'For Sale',
-    type: 'Apartment',
-    bedrooms: 2,
-    bathrooms: 2,
-    area: 1200,
-    yearBuilt: 2020,
-    garages: 1,
+    type: 'House',
+    bedrooms: 3,
+    bathrooms: 2.5,
+    area: 1650,
+    yearBuilt: 2015,
+    garages: 2,
     address: {
-      street: '789 Grand Ave',
-      city: 'Los Angeles',
-      state: 'CA',
-      zipCode: '90017',
-      country: 'USA',
+      street: 'Springbank Dr',
+      city: 'London',
+      state: 'ON',
+      zipCode: 'N6J',
+      country: 'Canada',
     },
-    features: ['Balcony', 'City View', 'Security System'],
-    amenities: ['Gym', 'Concierge', 'Rooftop Terrace'],
+    features: ['Updated Kitchen', 'Finished Basement', 'Hardwood Floors'],
+    amenities: ['Central Air', 'Gas Fireplace', 'Deck'],
     images: [
       'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80',
     ],
@@ -120,25 +126,25 @@ const similarProperties: Property[] = [
   },
   {
     id: '3',
-    title: 'Spacious Family Home',
-    description: 'Beautiful family home in a quiet neighborhood with spacious backyard.',
-    price: 1250000,
+    title: 'Executive Home in Oakridge',
+    description: 'Luxury executive home with premium finishes, main floor office, and professionally landscaped grounds.',
+    price: 975000,
     status: 'For Sale',
     type: 'House',
     bedrooms: 4,
-    bathrooms: 3,
-    area: 2800,
+    bathrooms: 3.5,
+    area: 2400,
     yearBuilt: 2018,
-    garages: 2,
+    garages: 3,
     address: {
-      street: '456 Oak Street',
-      city: 'Pasadena',
-      state: 'CA',
-      zipCode: '91101',
-      country: 'USA',
+      street: 'Commissioners Rd',
+      city: 'London',
+      state: 'ON',
+      zipCode: 'N6K',
+      country: 'Canada',
     },
-    features: ['Garden', 'Patio', 'Fireplace'],
-    amenities: ['Central Air', 'Smart Home', 'Granite Countertops'],
+    features: ['Main Floor Office', 'Premium Finishes', 'Triple Garage'],
+    amenities: ['Smart Home System', 'Wine Cellar', 'Home Theater'],
     images: [
       'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80',
     ],
@@ -226,7 +232,7 @@ const PropertyDetailsPage: React.FC = () => {
               </div>
             </div>
             <div className="mt-4 md:mt-0">
-              <span className="text-3xl font-bold">${property.price.toLocaleString()}</span>
+              <span className="text-3xl font-bold">${property.price.toLocaleString()} CAD</span>
               <span className="ml-2 bg-green-500 text-white px-2 py-1 rounded text-sm">{property.status}</span>
             </div>
           </div>
@@ -358,7 +364,10 @@ const PropertyDetailsPage: React.FC = () => {
                     <div>
                       <p className="text-gray-700 mb-4">{property.description}</p>
                       <p className="text-gray-700 mb-4">
-                        The main level boasts a gourmet kitchen with custom cabinetry and high-end appliances, a formal dining room, and a spacious living area with a fireplace. The primary suite includes a spa-like bathroom with a soaking tub and a large walk-in closet. Additional features include smart home technology, a home theater, a wine cellar, and a fitness room.
+                        On the main level, you'll find a bright open-concept layout with a living room, dining room, modern kitchen, laundry area, granite and quartz countertops, stainless steel appliances, gas stove, and hardwood flooring perfect for everyday living and entertaining. In total, the home includes 2 full kitchens and 3 full bathrooms, offering incredible flexibility for extended family or income potential.
+                      </p>
+                      <p className="text-gray-700 mb-4">
+                        The exterior features a brick and vinyl facade, stamped concrete driveway and deck, gas connection and stove in the garage, and a professionally landscaped yard. Located close to all amenities, including schools, shopping, parks, trails, and just minutes to Highway 401. You'll love living in park heaven, with 4 parks and recreational facilities within walking distance.
                       </p>
                       
                       <div className="mt-6">
@@ -378,11 +387,11 @@ const PropertyDetailsPage: React.FC = () => {
                           </div>
                           <div className="flex items-center">
                             <span className="text-gray-500 w-1/2">Property Price:</span>
-                            <span className="font-medium text-gray-700">${property.price.toLocaleString()}</span>
+                            <span className="font-medium text-gray-700">${property.price.toLocaleString()} CAD</span>
                           </div>
                           <div className="flex items-center">
                             <span className="text-gray-500 w-1/2">Bedrooms:</span>
-                            <span className="font-medium text-gray-700">{property.bedrooms}</span>
+                            <span className="font-medium text-gray-700">{property.bedrooms} (3+2)</span>
                           </div>
                           <div className="flex items-center">
                             <span className="text-gray-500 w-1/2">Bathrooms:</span>
@@ -395,6 +404,14 @@ const PropertyDetailsPage: React.FC = () => {
                           <div className="flex items-center">
                             <span className="text-gray-500 w-1/2">Year Built:</span>
                             <span className="font-medium text-gray-700">{property.yearBuilt || 'N/A'}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <span className="text-gray-500 w-1/2">Lot Size:</span>
+                            <span className="font-medium text-gray-700">41.51 x 105.59 Feet</span>
+                          </div>
+                          <div className="flex items-center">
+                            <span className="text-gray-500 w-1/2">Parking Spaces:</span>
+                            <span className="font-medium text-gray-700">6 Total</span>
                           </div>
                         </div>
                       </div>
@@ -412,6 +429,32 @@ const PropertyDetailsPage: React.FC = () => {
                           </div>
                         ))}
                       </div>
+                      
+                      <div className="mt-8">
+                        <h4 className="text-lg font-bold mb-4">Recreational Facilities Nearby</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="bg-gray-50 p-4 rounded-lg">
+                            <h5 className="font-semibold mb-2">Within 20-minute walk:</h5>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                              <li>• 4 Parks</li>
+                              <li>• 4 Playgrounds</li>
+                              <li>• 1 Arena</li>
+                              <li>• 3 Rinks</li>
+                              <li>• 1 Basketball court</li>
+                            </ul>
+                          </div>
+                          <div className="bg-gray-50 p-4 rounded-lg">
+                            <h5 className="font-semibold mb-2">Also nearby:</h5>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                              <li>• 2 Ball diamonds</li>
+                              <li>• 4 Sports fields</li>
+                              <li>• 1 Community centre</li>
+                              <li>• 2 Trails</li>
+                              <li>• Bus stop (4-min walk)</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   )}
 
@@ -428,17 +471,21 @@ const PropertyDetailsPage: React.FC = () => {
                       <div className="mt-6">
                         <h3 className="text-xl font-bold mb-4">Location Details</h3>
                         <p className="text-gray-700 mb-4">
-                          This property is located in a prime area of {property.address.city}, offering convenient access to shopping, dining, entertainment, and schools. The neighborhood is known for its safety, beautiful tree-lined streets, and friendly community atmosphere.
+                          This property is located in London, Ontario's desirable south end, offering convenient access to shopping, dining, entertainment, and top-rated schools. The neighborhood is known for its safety, beautiful tree-lined streets, and friendly community atmosphere with easy access to green spaces and recreational facilities.
                         </p>
                         
                         <div className="mt-4">
+                          <h4 className="font-bold mb-2">Directions:</h4>
+                          <p className="text-gray-700 mb-4">Turn east on Devon Rd from White Oak Rd. The property fronts on the east side with excellent privacy backing onto green space.</p>
+                          
                           <h4 className="font-bold mb-2">Points of Interest Nearby:</h4>
                           <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                            <li>5 minutes to shopping centers</li>
-                            <li>10 minutes to downtown</li>
-                            <li>15 minutes to the nearest beach</li>
-                            <li>Close to top-rated schools</li>
-                            <li>Easy access to major highways</li>
+                            <li>Minutes to Highway 401 access</li>
+                            <li>Close to Masonville Place shopping center</li>
+                            <li>Near top-rated elementary and secondary schools</li>
+                            <li>Walking distance to Thames Valley Parkway trails</li>
+                            <li>Easy access to Western University</li>
+                            <li>4-minute walk to public transit</li>
                           </ul>
                         </div>
                       </div>
@@ -488,7 +535,7 @@ const PropertyDetailsPage: React.FC = () => {
                         In Person
                       </div>
                       <div className="w-1/2 py-2 px-4 text-center cursor-pointer text-gray-500">
-                        Video Chat
+                        Virtual Tour
                       </div>
                     </div>
                   </div>

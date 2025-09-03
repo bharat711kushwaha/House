@@ -9,31 +9,31 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import HeroSection from '../components/common/HeroSection'; 
 
-// Mock data for featured properties
+// Updated featured properties with new Canadian property data
 const featuredProperties = [
   {
     id: '1',
-    title: 'Modern Villa in Beverly Hills',
-    description: 'A stunning modern villa with panoramic views of the city.',
-    price: 4500000,
+    title: 'Beautiful 4-Level Split Home with Ravine Lot',
+    description: 'A beautifully maintained 4-level split detached home with private ravine lot backing onto green space, featuring 2 full kitchens, self-contained basement apartment, and stunning natural views.',
+    price: 849000,
     status: 'For Sale' as const,
-    type: 'Villa' as const,
-    bedrooms: 5,
-    bathrooms: 4,
-    area: 4200,
-    yearBuilt: 2020,
+    type: 'House' as const,
+    bedrooms: 5, // 3+2 bedrooms
+    bathrooms: 3,
+    area: 1750, // Estimated from 1500-2000 sq ft range
+    yearBuilt: 2010, // Estimated based on modern features
     garages: 2,
     address: {
-      street: '123 Beverly Dr',
-      city: 'Beverly Hills',
-      state: 'CA',
-      zipCode: '90210',
-      country: 'USA',
+      street: 'Devon Rd',
+      city: 'London',
+      state: 'ON',
+      zipCode: 'N6H',
+      country: 'Canada',
     },
-    features: ['Pool', 'Garden', 'Security System'],
-    amenities: ['Air Conditioning', 'Heating', 'Gym', 'Wine Cellar'],
+    features: ['Private Ravine Lot', 'Self-Contained Basement Apartment', 'Gas Fireplace', '2 Full Kitchens', 'Walk-out to Backyard', 'Primary Suite with Jacuzzi'],
+    amenities: ['Central Air', 'Natural Gas Heating', 'Hardwood Flooring', 'Granite & Quartz Countertops', 'Stainless Steel Appliances', 'Gas Stove', 'Laundry Area'],
     images: [
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80',
+      'https://live-images.stratuscollab.com/lHrziaY_1Sk1ogswmOIJGpMoQPhfMx8Vq4uJN-lxRb8/rs:fit:900:600:0/g:no/cb:MjAyNS0wOC0xM1QwMDowMDo0Ni4wMDBa/aHR0cHM6Ly90cnJlYi1pbWFnZS5hbXByZS5jYS9mckZmaGZWMExhOVA0TWxWdEFqd1FEUEF1S0VuVHZJNi1tMUZnMkdVWnFnL3JzOmZpdC93OjE5MDAvaDoxOTAwL2c6Y2Uvd206LjU6c286MDo1MDouNC93bXNoOjEwL3dtdDpQSE53WVc0Z1ptOXlaV2R5YjNWdVpEMG5kMmhwZEdVbklHWnZiblE5SnpZNEp6NUZXRVZEVlZSSlZrVWdVa1ZCVENCRlUxUkJWRVVnVTBWU1ZrbERSVk1nVEZSRUxpd2dRbkp2YTJWeVlXZGxQQzl6Y0dGdVBnL0wzUnljbVZpTDJ4cGMzUnBibWR6THpReEx6ZzRMekU1THpnM0wzQXZNVEV6TURVNU56WXRNakl4WVMwME5qTmxMVGxpTnpRdE1qVmxOMk0xWW1NM1pEaGlMbXB3WldjLmpwZw.jpg',
     ],
     ownerId: 'owner1',
     createdAt: '2025-03-15T10:00:00Z',
